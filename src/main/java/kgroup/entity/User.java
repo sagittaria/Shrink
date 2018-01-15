@@ -1,21 +1,22 @@
 package kgroup.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class User implements Serializable {
-    private String _id;
+    private String id;
     private String name;
     private String gender;
     private String birthday;
-    private String[] hobby;
+    private ArrayList<String> hobby;
     private String major;
 
-    public String get_id() {
-        return _id;
+    public String getId() {
+        return id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -42,11 +43,11 @@ public class User implements Serializable {
         this.birthday = birthday;
     }
 
-    public String[] getHobby() {
+    public ArrayList<String> getHobby() {
         return hobby;
     }
 
-    public void setHobby(String[] hobby) {
+    public void setHobby(ArrayList<String> hobby) {
         this.hobby = hobby;
     }
 
@@ -58,9 +59,9 @@ public class User implements Serializable {
         this.major = major;
     }
 
-    public User(String _id, String name, String gender, String birthday, String[] hobby, String major) {
+    public User(String id, String name, String gender, String birthday, ArrayList<String> hobby, String major) {
         super();
-        this._id = _id;
+        this.id = id;
         this.name = name;
         this.gender = gender;
         this.birthday = birthday;
@@ -74,6 +75,6 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "Student [id=" + _id + ", name=" + name + ", birthday=" + birthday + "]";
+        return "Student [id=" + id + ", name=" + name + ", birthday=" + birthday + "]";
     }
 }
